@@ -21,7 +21,7 @@
 .headerDivider {
   width: 100%;
   height: 2px;
-  margin-top: 10px;
+  margin: 10px 0px;
   background: linear-gradient(
     -90deg,
     #151a1e 0%,
@@ -37,16 +37,20 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  margin: 20px;
+  max-height: 80vh;
 }
 
 .grid {
   display: grid;
   grid-template-rows: repeat(4, auto);
   grid-template-columns: repeat(4, auto);
-  min-height: 640px;
-  min-width: 800px;
+  gap: 2vh;
+  min-height: 50vh;
+  min-width: 100vw;
   position: relative;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .victorySection {
@@ -62,7 +66,7 @@
 .victoryText {
   margin-right: 20px;
   color: #e8ebed;
-  font-size: 3em;
+  font-size: 2em;
   font-weight: 600;
   letter-spacing: 5px;
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -84,4 +88,13 @@
   background-color: #151a1ed8;
   color: #e8ebed;
   border-color: rgb(255, 103, 194);
+}
+
+@media (min-width: 640px) {
+  .grid {
+    gap: 3.5vh;
+  }
+  .victoryText {
+    font-size: 3em;
+  }
 }

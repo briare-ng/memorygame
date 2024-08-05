@@ -1,10 +1,8 @@
 .card {
-  height: 120px;
-  width: 160px;
-  margin: 20px;
+  height: 10vh;
+  width: 20vw;
   background: transparent;
   cursor: pointer;
-  perspective: 1000px;
 }
 
 .card.active {
@@ -57,4 +55,19 @@ card:hover .cardBack {
 .cardFront {
   background-color: rgb(76, 82, 87);
   border: 2px solid rgb(76, 82, 87);
+}
+
+@media (min-width: 640px) {
+  .card {
+    height: 15vh;
+    width: 20vw;
+    max-height : 120px;
+  max-width : 200px;}
+  .card.active {
+    transform: scale(1.02);
+  }
+  .card:hover .cardFront,
+card:hover .cardBack {
+  transform: scale(1.05);
+}
 }
